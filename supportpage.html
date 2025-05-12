@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Support Page - Student Portfolio</title>
+    
+    <script>
+        function openTab(tabName) {
+            // Hide all content sections
+            var contents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].style.display = "none";
+            }
+
+            // Remove active class from all buttons
+            var buttons = document.getElementsByClassName("tab-btn");
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+
+            // Show the selected tab content and highlight the active button
+            document.getElementById(tabName).style.display = "block";
+            document.querySelector(`[onclick="openTab('${tabName}')"]`).classList.add("active");
+        }
+    </script>
+
+</head>
+<style>
+    .navbar {
+    background-color: #000000;
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+/* Underline effect on hover */
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+footer {
+            background: linear-gradient(135deg, #0f0202, #0d0d0d);
+            padding: 50px 10%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 50px;
+            background-color: transparent;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            padding-bottom: 30px;
+        }
+
+        .footer-nav h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            background: linear-gradient(90deg, #613434, #c9b5b5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-nav ul {
+            list-style: none;
+        }
+
+        .footer-nav ul li {
+            margin: 10px 0;
+        }
+
+        .footer-nav ul li a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-nav ul li a:hover {
+            color: #5e3140;
+            transform: translateX(5px);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            font-size: 22px;
+            color: #ccc;
+            padding: 10px;
+            transition: 0.3s ease;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+        }
+
+        .social-icons a:hover {
+            background: #200b0b;
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 0 10px #ff6b6b;
+        }
+
+        .divider {
+            height: 2px;
+            width: 100%;
+            background: linear-gradient(90deg, transparent, #ff6b6b, transparent);
+            margin-top: 30px;
+        }
+
+        .copyright {
+            font-size: 14px;
+            padding-top: 15px;
+            color: #bebebe;
+        }
+
+</style>
+<body style="font-family: Palatino Linotype; text-align: center; padding: 20px; background-color: #000000;">
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="myprojects.html">Projects</a></li>
+            <li><a href="supportpage.html">Support</a></li>
+            <li style="float:right"><a href="contactus.html">Contact Me</a></li>
+        </ul>
+    </nav>
+    <h2 style="color: #bdb6b6;">Support Page</h2>
+    <p style="color: #666;">Find answers to your questions and explore our policies.</p>
+
+    <!-- Tab Buttons -->
+    <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+      <button class="tab-btn active" onclick="openTab('faqs')" 
+          style="padding: 10px 20px; margin: 5px; border: none; background: #6b273d; color: rgb(0, 0, 0); cursor: pointer; 
+                 border-radius: 5px; transition: 0.3s; font-size: 16px;"
+          onmouseover="this.style.background='#be8080'; this.style.transform='scale(1.1)'; this.style.boxShadow='0px 0px 4px white';"
+          onmouseout="this.style.background='#be8080'; this.style.transform='scale(1)'; this.style.boxShadow='none';">
+          FAQs
+      </button>
+      <button class="tab-btn" onclick="openTab('help')" 
+      style="padding: 10px 20px; margin: 5px; border: none; background: #6b273d; color:rgb(0, 0, 0); cursor: pointer; 
+             border-radius: 5px; transition: 0.3s; font-size: 16px;"
+      onmouseover="this.style.background='#be8080'; this.style.transform='scale(1.1)'; this.style.boxShadow='0px 0px 4px white';"
+      onmouseout="this.style.background='#be8080'; this.style.transform='scale(1)'; this.style.boxShadow='none';">
+      Help Center
+  </button>
+  <button class="tab-btn" onclick="openTab('privacy')" 
+  style="padding: 10px 20px; margin: 5px; border: none; background: #6b273d; color:rgb(0, 0, 0); cursor: pointer; 
+         border-radius: 5px; transition: 0.3s; font-size: 16px;"
+  onmouseover="this.style.background='#be8080'; this.style.transform='scale(1.1)'; this.style.boxShadow='0px 0px 4px white';"
+  onmouseout="this.style.background='#be8080'; this.style.transform='scale(1)'; this.style.boxShadow='none';">
+  Privacy Policy
+</button>
+        <button class="tab-btn" onclick="openTab('terms')" 
+        style="padding: 10px 20px; margin: 5px; border: none; background: #6b273d; color:rgb(0, 0, 0); cursor: pointer; 
+        border-radius: 5px; transition: 0.3s; font-size: 16px;"
+ onmouseover="this.style.background='#be8080'; this.style.transform='scale(1.1)'; this.style.boxShadow='0px 0px 4px white';"
+ onmouseout="this.style.background='#be8080'; this.style.transform='scale(1)'; this.style.boxShadow='none';">
+ Terms & Conditions
+        </button>
+    </div>
+
+    <!-- Tab Content Sections -->
+    <div id="faqs" class="tab-content" style="display: block; background: white; padding: 20px; border-radius: 10px; max-width: 600px; margin: auto; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+        <h3>Frequently Asked Questions</h3>
+        <p><b>Q1:</b> How can I contact support?</p>
+        <p><b>A:</b> You can reach us via email at support@example.com.</p>
+        <p><b>Q2:</b> Where can I find tutorials?</p>
+        <p><b>A:</b> Check out our Help Center section for detailed guides.</p>
+    </div>
+
+    <div id="help" class="tab-content" style="display: none; background: white; padding: 20px; border-radius: 10px; max-width: 600px; margin: auto; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+        <h3>Help Center</h3>
+        <p>Need help? Our team is here for you!</p>
+        <p>Contact us through live chat, email, or check out our FAQs for quick answers.</p>
+    </div>
+
+    <div id="privacy" class="tab-content" style="display: none; background: white; padding: 20px; border-radius: 10px; max-width: 600px; margin: auto; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+        <h3>Privacy Policy</h3>
+        <p>Your privacy is important to us.</p>
+        <p>We do not share your personal data with third parties.</p>
+    </div>
+
+    <div id="terms" class="tab-content" style="display: none; background: white; padding: 20px; border-radius: 10px; max-width: 600px; margin: auto; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+        <h3>Terms & Conditions</h3>
+        <p>By using our website, you agree to our terms and conditions.</p>
+        <p>Make sure to read them carefully before continuing.</p>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-nav">
+                <h3>About Me</h3>
+                <ul>
+                    <li><a href="#">Academic Background</a></li>
+                    <li><a href="#">Skills and Strengths</a></li>
+                    <li><a href="#">Passion and Intrests</a></li>
+                    <li><a href="#">Goals and Aspirations</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-nav">
+                <h3>Projects</h3>
+                <ul>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Weather App</a></li>
+                    <li><a href="#">To Do List</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-nav">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-nav">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="#">Email Us</a></li>
+                    <li><a href="#">Live Chat</a></li>
+                    <li><a href="#">Request a Callback</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+        <div class="social-icons">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+
+        <div class="copyright">
+            &copy; 2025 Zinnia Choudhury. All rights reserved.
+        </div>
+    </footer>
+    
+</body>
+</html>

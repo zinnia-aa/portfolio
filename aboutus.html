@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contact Me</title>
+    </head>
+    <style>
+            body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #000000;
+    }
+    .navbar {
+        background-color: #000000;
+        padding: 10px 20px;
+    }
+    
+    .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: left;
+    }
+    
+    .navbar ul li {
+        margin: 0 15px;
+    }
+    
+    .navbar ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        padding-bottom: 5px;
+        position: relative;
+    }
+    
+    /* Underline effect on hover */
+    .navbar ul li a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #fff;
+        transition: width 0.3s;
+    }
+    
+    .navbar ul li a:hover::after {
+        width: 100%;
+    }
+     
+
+    .header {
+      background-color: #000000;
+      color: rgb(247, 241, 241);
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgb(148, 105, 105);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .profile {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .profile-img {
+      flex: 1 1 200px;
+    }
+
+    .profile-img img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10%;
+      margin-left: 20px;
+      border: 2px solid #000000;
+    }
+
+    .profile-info {
+      flex: 2 1 300px;
+    }
+
+    .profile-info h2 {
+      margin-top: 0;
+    }
+
+    .bio {
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .skills {
+      margin-top: 30px;
+    }
+
+    .skills h3 {
+      margin-bottom: 10px;
+    }
+
+    .skills ul {
+      list-style-type: none;
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills li {
+      background-color: #cf96a7;
+      color: #b81e4c;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .profile {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-info {
+        padding-top: 20px;
+      }
+    }
+
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background-color: #be8080;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    section h2 {
+      color: #6b273d;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight {
+      color: #00c3ff;
+    }
+/* 
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #222;
+      border-top: 1px solid #333;
+      color: #888;
+    } */
+
+    /* Optional Fade-In Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-in-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+       footer {
+            background: linear-gradient(135deg, #0f0202, #0d0d0d);
+            padding: 50px 10%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 20px;
+            background-color: transparent;
+        } 
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            padding-bottom: 30px;
+        }
+
+        .footer-nav h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            background: linear-gradient(90deg, #613434, #c9b5b5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-nav ul {
+            list-style: none;
+        }
+
+        .footer-nav ul li {
+            margin: 10px 0;
+        }
+
+        .footer-nav ul li a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-nav ul li a:hover {
+            color: #5e3140;
+            transform: translateX(5px);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            font-size: 22px;
+            color: #ccc;
+            padding: 10px;
+            transition: 0.3s ease;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+        }
+
+        .social-icons a:hover {
+            background: #200b0b;
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 0 10px #ff6b6b;
+        }
+
+        .divider {
+            height: 2px;
+            width: 100%;
+            background: linear-gradient(90deg, transparent, #ff6b6b, transparent);
+            margin-top: 30px;
+        }
+
+        .copyright {
+            font-size: 14px;
+            padding-top: 15px;
+            color: #bebebe;
+        }
+
+        .link-style {
+      display: block;
+      margin-left: 60px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      text-decoration: none;
+      color: #a56f6f;
+      padding-left: 30px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      width: fit-content;
+    }
+
+    /* 1. Change text color */
+    .color-hover:hover {
+      color: rgb(114, 37, 37);
+    }
+
+  </style>
+</head>
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="myprojects.html">Projects</a></li>
+                <li><a href="supportpage.html">Support</a></li>
+                <li style="float:right"><a href="contactus.html">Contact Me</a></li>
+            </ul>
+        </nav>
+  <div class="header">
+    <h1 class="link-style color-hover">About Me</h1>
+  </div>
+
+  <div class="container">
+    <div class="profile">
+      <div class="profile-img">
+        <img src="webpage pic small.png" alt="Student Photo">
+      </div>
+      <div class="profile-info">
+        <h2>Hello, I'm Zinnia Choudhury</h2>
+        <p class="bio">
+          I’m a passionate student pursuing a degree in Web Programming. I love building creative, user-friendly websites and applications.
+          With a strong foundation in HTML, CSS, JavaScript, and frameworks like React, I'm continuously learning and improving my craft.
+          I enjoy turning complex problems into simple, beautiful designs.
+        </p>
+      </div>
+    </div>
+
+    <div class="skills">
+      <h3>My Skills</h3>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Bootstrap</li>
+        <li>Git & GitHub</li>
+        <li>Responsive Design</li>
+        <li>Figma</li>
+      </ul>
+    </div>
+  </div>
+   <section class="fade-in">
+    <h2>Academic Background</h2>
+    <ul>
+      <li>🎓 Pursuing Web Programming – Academic Year 2024–25</li>
+      <li>📚 Completed High School with a focus on Computer Science</li>
+      <li>🧠 Courses: HTML, CSS, JavaScript, Data Structures, UI/UX Design</li>
+    </ul>
+  </section>
+
+  <section class="fade-in">
+    <h2>Skills and Strength</h2>
+    <ul>
+      <li>💻 Proficient in HTML, CSS, JavaScript</li>
+      <li>🎨 Strong design sense and creativity</li>
+      <li>⚡ Fast learner and adaptable to new technologies</li>
+      <li>🤝 Team player with good communication skills</li>
+    </ul>
+  </section>
+
+  <section class="fade-in">
+    <h2>Passion and Interest</h2>
+    <ul>
+      <li>❤️ Passionate about front-end development and interactive design</li>
+      <li>🎮 Love creating animations and web experiences</li>
+      <li>📷 Interested in digital art and photography</li>
+      <li>🧩 Enjoy solving problems and building useful web tools</li>
+    </ul>
+  </section>
+
+  <section class="fade-in">
+    <h2>Goals and Aspirations</h2>
+    <ul>
+      <li>🌐 Build a personal brand through a professional website</li>
+      <li>🚀 Work as a front-end developer in a creative tech company</li>
+      <li>📈 Constantly improve my design and coding skills</li>
+      <li>💡 Create projects that positively impact users</li>
+    </ul>
+  </section>
+
+  <footer>
+            <div class="footer-container">
+                <div class="footer-nav">
+                    <a href="aboutus.html" class="link-style color-hover">About</a>
+                    <ul>
+                        <li><a href="#">Academic Background</a></li>
+                        <li><a href="#">Skills and Strengths</a></li>
+                        <li><a href="#">Passion and Intrests</a></li>
+                        <li><a href="#">Goals and Aspirations</a></li>
+                    </ul>
+                </div>
+                               <div class="footer-nav">
+                   <a href="#" class="link-style color-hover">Projects</a>
+                    <ul>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Weather App</a></li>
+                        <li><a href="#">To Do List</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-nav">
+                    <a href="supportpage.html" class="link-style color-hover">Support</a>
+                    <ul>
+                        <li><a href="supportpage.html">FAQs</a></li>
+                        <li><a href="supportpage.html">Help Center</a></li>
+                        <li><a href="supportpage.html">Privacy Policy</a></li>
+                        <li><a href="supportpage.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-nav">
+                    <a href="contact us page.html" class="link-style color-hover">Contact Me</a>
+                    <ul>
+                        <li><a href="#">Email Us</a></li>
+                        <li><a href="#">Live Chat</a></li>
+                        <li><a href="#">Request a Callback</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="divider"></div>
+            <div class="social-icons">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+    
+            <div class="copyright">
+                &copy; 2025 Zinnia Choudhury. All rights reserved.
+            </div>
+        </footer>
+        <script>
+  const sections = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible'); // <-- allow retrigger on scroll
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+</body>
+</html>
